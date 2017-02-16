@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project name="CalcApp" default="debug">
+   <property name="output.dir" value="C:\Git\Project\Project1\Structs_sample\C#\output" />
+   <property name="config" value="debug" />
+   
+   <target name="release">
+      <property name="config" value="debug" />
+      <property name="output.dir" value="C:\Git\Project\Project1\Structs_sample\C#\output\Release" />
+      <call target="build" />
+   </target>
+
+   <target name="debug">
+      <property name="config" value="release" />
+      <property name="output.dir" value="C:\Git\Project\Project1\Structs_sample\C#\output\Debug" />
+      <call target="build" />
+   </target>
+
+   <target name="build">
+      <solution configuration="${config}"
+                solutionfile="Structs.sln"
+                outputdir="${output.dir}" />
+   </target>
+
+</project>
