@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <project name="CalcApp" default="debug">
-   <property name="output.dir" value="C:\Jenkins\Jobs\Dotnet Job\output" />
+   <property name="output.dir" value="C:\Git\projects\Project_dotnet" />
    <property name="config" value="debug" />
    
    <target name="release">
       <property name="config" value="debug" />
-      <property name="output.dir" value="C:\Jenkins\Jobs\Dotnet Job\output\Release" />
+      <property name="output.dir" value="C:\Git\projects\Project_dotnet" />
       <call target="build" />
    </target>
 
    <target name="debug">
       <property name="config" value="release" />
-      <property name="output.dir" value="C:\Jenkins\Jobs\Dotnet Job\output\Debug" />
+      <property name="output.dir" value="C:\Git\projects\Project_dotnet" />
       <call target="build" />
    </target>
 
